@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2&family=Lobster&display=swap');
+
+body {
+    font-family: 'Exo 2', sans-serif;
+}
+
+/* nav section */
+
+.navbar {
+    background-color: #5c3d2e;
+    color: white;
+    
+    z-index: 3;
+
+}
+
+.nav-link:focus,
+.nav-link:hover {
+    color: #FF4C29;
+}
+
+.nav-link {
+    color: rgb(255, 255, 255);
+    /* font-weight: 700; */
+
+}
+
+.navbar-brand {
+    font-size: 30px;
+    font-family: 'Lobster', cursive;
+    color: rgb(255, 255, 255);
+
+}
+
+.navbar-brand:hover {
+    color: #FF4C29;
+}
+
+.navbar-toggler {
+    border: 1px solid white;
+}
+
+.navbar-toggler:focus {
+    text-decoration: none;
+    outline: 0;
+    box-shadow: 0 0px 5px white;
+}
+
+.dropdown-menu {
+    background-color: #5C3D2E;
+    border: none;
+}
+
+.dropdown-item:hover {
+    background-color: #FF4C29;
+}
+
+.dropdown-item {
+    color: white;
+}
+
+/* nav section end */
+/* carousel-slider-start */
+
+.carousel-item::before {
+
+    content: "";
+    background-color: #000;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: .5;
+
+}
+
+/* carousel-slider-end */
+
+/* description section start  */
+.unique_btn {
+    background-color: #fe0000;
+    color: white;
+    position: relative;
+    z-index: 1;
+    border: none;
+    border-radius: 5px;
+
+}
+.unique_btn:hover {
+    color: white;
+}
+.unique_btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    border-radius: 5px;
+    z-index: -1;
+    width: 0%;
+    background-color: black;
+    display: block;
+    transition: all .5s;
+}
+.unique_btn:hover.unique_btn::before {
+    width: 100%;
+}
+
+/* description section end  */
+
+/* order_section_start */
+
+.price {
+    top: 0%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 54px;
+    height: 54px;
+    background-color: #000; 
+    color: #ffff;
+    border-radius: 50%; 
+    border: 3px solid white;
+    transition: all .5s;
+}
+.order_description{
+    transition: all .5s;
+    
+}
+.order_img:hover .price {
+    background-color: red;
+}
+
+.order_img:hover .order_description {
+    color: white;
+    background-color: red;
+}
+/* order_section_end */
+
+/* discount_section_start */
+.image_shade{
+    filter: drop-shadow(0px 0px 5px #000);
+}
+.discount_img::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    display: block;
+    opacity: .8;
+    background-color: rgb(255, 181, 181);
+    transition: all .5s;
+}
+.discount_img:hover::before{
+    width: 100%;
+}
+.discount_description{
+    visibility: hidden;
+    color: rgb(255, 255, 255);
+}
+.discount_img:hover .discount_description{
+    visibility: visible;
+}
+/* discount_section_end */
+/* special background */
+.special_bg {
+    background-image: linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,.5)), url(../image/special_offer/sp_order.jpg);
+    background-position: center;
+    background-size: cover;
+    height: auto;
+}
+/* special background END */
+/* member_section_start */
+.team_image{
+    transition: all .5s;
+}
+.member_info ul{
+    visibility: hidden;
+    transition: all .2s;
+}
+.team_image:hover .member_info ul{
+    visibility: visible;
+}
+.team_image:hover{
+    filter: drop-shadow(0px 2px 5px #000);
+}
+/* member_section_start end */
